@@ -319,28 +319,15 @@ service=get_service()
 
 labels=gmail_labels()
 
-mailwithatt=ListMessagesMatchingQuery(service, 'me', 'from:Charlotte.Cope@attwells.com ')
-
-<<<<<<< 115240e923145d39ff598e65ca6a6a3e99022a89
-=======
 mailwithatt = ListMessagesMatchingQuery(service, 'me', 'from:xxx')
->>>>>>> removed mail address
 
-
-
-
-
-
-
-<<<<<<< 115240e923145d39ff598e65ca6a6a3e99022a89
 #GET THE MESSAGE IDS AND MKDIR
 subject='RE:dummy subject'
 store_dir='e:/gmailtest/'
 path=os.path.join(store_dir,subject.replace(':','-'))
 store_folder=os.mkdir(path)
-=======
 mailwithatt = ListMessagesMatchingQuery(service, 'me', 'from:xxx')
->>>>>>> removed mail address
+
 
 
 for att in mailwithatt:
