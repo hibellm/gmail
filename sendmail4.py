@@ -12,7 +12,7 @@ from email.mime.audio import MIMEAudio
 from email.mime.base import MIMEBase
 
 SCOPES = 'https://www.googleapis.com/auth/gmail.send'
-CLIENT_SECRET_FILE = 'client_secret.json'
+CLIENT_SECRET_FILE = 'credentials.json'
 APPLICATION_NAME = 'Gmail API Python Send Email'
 
 def get_credentials():
@@ -20,7 +20,7 @@ def get_credentials():
     credential_dir = os.path.join(home_dir, '.credentials')
     if not os.path.exists(credential_dir):
         os.makedirs(credential_dir)
-    credential_path = os.path.join(credential_dir,'client_secret.json')
+    credential_path = os.path.join(credential_dir,'credentials.json')
     store = oauth2client.file.Storage(credential_path)
     credentials = store.get()
     if not credentials or credentials.invalid:

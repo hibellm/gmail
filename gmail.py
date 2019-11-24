@@ -12,7 +12,7 @@ from apiclient import errors, discovery
 # If modifying these scopes, delete the file token.json.
 #SCOPES = 'https://www.googleapis.com/auth/gmail.readonly'
 SCOPES = 'https://www.googleapis.com/auth/gmail.readonly'
-CLIENT_SECRET_FILE = 'client_secret.json'
+CLIENT_SECRET_FILE = 'credentials.json'
 APPLICATION_NAME = 'Gmail API Python Send Email'
 
 

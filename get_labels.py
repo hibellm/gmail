@@ -38,7 +38,7 @@ def get_service():
 
 def gmail_labels():
 
-    service=get_service()
+    service = get_service()
     # Call the Gmail API
     results = service.users().labels().list(userId='me').execute()
     labels = results.get('labels', [])
@@ -48,6 +48,6 @@ def gmail_labels():
     else:
         print('Labels (in account):')
         for label in labels:
-            print('  '+label['name']+' [id:'+label['id']+']')
+            print(f"  {label['name']} [id: {label['id']}]")
 
 gmail_labels()
