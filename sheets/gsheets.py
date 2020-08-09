@@ -10,7 +10,7 @@ https://github.com/robin900/gspread-formatting
 import pickle
 import os.path
 import gspread
-from gspread_formatting import *     # PIP INSTALL GSPREAD_FORMATTING
+from gspread_formatting import cellFormat, format_cell_range, get_effective_format   # PIP INSTALL GSPREAD_FORMATTING
 
 
 from oauth2client.service_account import ServiceAccountCredentials
@@ -39,7 +39,6 @@ wks.update_cell(4, 1, 'TRUE')  # TRUE AS A CHECKBOX
 
 
 # UPDATE FORMAT OF CELL - SUING GSPREAD_FORMATTING MODULE
-
 
 fmt = get_effective_format(wks, 'A1')
 
